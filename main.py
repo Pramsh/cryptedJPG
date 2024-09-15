@@ -8,6 +8,7 @@ ACTIONS = {
     'READ': 'rb'
 }
 
+
 def handle_file_msg(file_name, action, cancel=False):
     try:
         if action == ACTIONS['WRITE']:
