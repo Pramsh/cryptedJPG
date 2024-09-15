@@ -1,5 +1,8 @@
 import sys
 
+jpg_end_line = 'FFD9'
+png_end_line = b'\x00\x00\x00\x00\x49\x45\x4e\x44\xae\x42\x60\x82'
+
 ACTIONS = {
     'WRITE': 'ab',
     'READ': 'rb'
@@ -14,7 +17,7 @@ def handle_file_msg(file_name, action, cancel=False):
         elif action == ACTIONS['READ']:
             with open(file_name, 'rb+') as f:
                 content = f.read()
-                marker = bytes.fromhex("FFD9")
+                marker = bytes.fromhex("FFD9") if ".jpg" in file_name else png_end_line#bytes.fromhex("png_end_line")
                 offset = content.index(marker)
                 f.seek(offset + len(marker))
                 if cancel:
