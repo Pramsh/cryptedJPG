@@ -18,7 +18,7 @@ This Python script hides secret messages within JPG files by modifying their byt
    ```bash
    python3 main.py image.jpg
    ```
-4**Choose** an option:
+4. **Choose** an option:
 * Write message into the JPG.
 * Read hidden message from the JPG.
 * Delete hidden message from the JPG.
