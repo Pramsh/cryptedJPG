@@ -3,7 +3,7 @@ This script is provided for educational and informational purposes only. It is i
 
 ## Overview
 
-This Python script hides secret messages within JPG files by modifying their bytes. You can also retrieve hidden messages from JPGs.
+This Python script hides secret messages within JPG or PNG files by modifying their bytes. You can also retrieve hidden messages from JPGs or PNGs.
 
 ## Requirements
 
@@ -15,13 +15,18 @@ This Python script hides secret messages within JPG files by modifying their byt
 1. **Navigate** to the directory containing `main.py`.
 2.  **Place** a jpg image into the directory.
 3. **Run** the script with:
+* JPG:
    ```bash
    python3 main.py image.jpg
    ```
+* PNG
+   ```bash
+   python3 main.py image.png
+   ```
 4. **Choose** an option:
-* Write message into the JPG.
-* Read hidden message from the JPG.
-* Delete hidden message from the JPG.
+* Write message into the JPG or PNG.
+* Read hidden message from the JPG or PNG.
+* Delete hidden message from the JPG or PNG.
 
 ##### Example:
 ```bash
@@ -30,7 +35,7 @@ python3 main.py secret_image.jpg
 I left an image with written something in it, are u able to find out what?
 
 #### Notes
-* Only works with JPG images.
+* Only works with JPG adn PNG images.
 
 Enjoy hiding and retrieving secret messages!
 
